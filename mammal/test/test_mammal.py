@@ -18,6 +18,10 @@ class TestMammal(TestCase):
         result = self.mammal.get_kingdom()
         self.assertEqual('animals', result)
 
+    def test_make_sound(self):
+        result = self.mammal.make_sound()
+        self.assertEqual("Joe makes kwak", result)
+
     def test_if_get_info(self):
         result = self.mammal.info()
         self.assertEqual("Joe is of type bird", result)
