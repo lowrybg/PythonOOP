@@ -32,7 +32,7 @@ class Storage:
     def edit_topic(self, topic_id: int, new_topic: str, new_storage_folder: str):
         for t in self.topics:
             if t.id == topic_id:
-                return self.edit_topic(topic_id, new_topic, new_storage_folder)
+                t.edit(new_topic, new_storage_folder)
 
     def edit_document(self, document_id: int, new_file_name: str):
         for d in self.documents:

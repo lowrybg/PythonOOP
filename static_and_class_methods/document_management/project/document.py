@@ -12,7 +12,7 @@ class Document:
 
     @classmethod
     def from_instances(cls, id: int, category: Category, topic: Topic, file_name: str):
-        return cls(id, category, topic, file_name)
+        return cls(id, category.id, topic.id, file_name)
 
     def add_tag(self, tag_content):
         for t in self.tags:
